@@ -1,0 +1,25 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+	var tela = document.querySelector("canvas");
+	var pincel = tela.getContext('2d');
+
+	//fundo verde da bandeira
+	pincel.fillStyle = "green";
+	pincel.fillRect(0,0,600,400);
+
+	//desenho do losango ao invés de 2 triângulos
+	pincel.fillStyle = "yellow";
+	pincel.beginPath();
+	pincel.moveTo(300,50);
+	pincel.lineTo(550,200);
+	pincel.lineTo(300,350);
+	pincel.lineTo(50,200)
+	pincel.fill();
+
+	//circulo azul
+	pincel.fillStyle = "blue";
+	pincel.beginPath();
+	pincel.arc(300,200,100,0,6);
+	pincel.fill();
+</script>
